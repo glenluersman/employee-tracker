@@ -83,5 +83,17 @@ const promptUser = () => {
 };
 
 showDepartments = () => {
-    const sql = `SELECT * FROM department`
-}
+    console.log('*****Showing All Departments*****');
+    const sql = `SELECT department.id AS id, department.department_name AS department FROM department`;
+
+    connection.promise().query(sql, (err, rows) => {
+        if (err) throw err;
+        console.table(rows);
+        promptUser();
+    });
+};
+
+// showRoles = () => {
+//     console.log('*****Showing All Roles*****');
+//     const sql = `SELECT role.id, role.role_title, department.department_name, role`
+// }
