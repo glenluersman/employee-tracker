@@ -35,7 +35,7 @@ Employee tracker is a MySQL database for keeping track of employee data. It is b
 
 ## <img id="installing" src="https://github.com/teamjuli0/readme-badges/blob/main/themes/clean-dark/menu-categories/installing.png?raw=true" style="height: 40px">
 
-Clone the repository and run the command npm install. Then the command node index to start the application.
+Clone the repository and create a .env file with your MySQL credentials, run the command npm install then run the command node index to start the application.
 
 ## <img id="usage" src="https://github.com/teamjuli0/readme-badges/blob/main/themes/clean-dark/menu-categories/usage.png?raw=true" style="height: 40px">
 

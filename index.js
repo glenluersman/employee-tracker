@@ -152,7 +152,9 @@ addEmployee = async () => {
                 const role = roleChoice.role;
                 params.push(role);
     
-                const managerSql = `SELECT manager_id, first_name, last_name FROM employee`;
+                const managerSql = `SELECT manager_id, first_name, last_name 
+                FROM employee
+                WHERE manager_id=id`;
     
                 const data = await query(managerSql)
     
