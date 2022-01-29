@@ -1,14 +1,27 @@
 USE employee_tracker;
 
-INSERT INTO department (id, department_name)
+INSERT INTO department (name)
 VALUES 
-    (1, sports);
+    ('Sales'),
+    ('IT'),
+    ('Finance'),
+    ('Operations');
 
-INSERT INTO role (id, title, salary)
-VALUES
-    (1, manager),
-    (2, employee);
 
-INSERT INTO employee (id, first_name, last_name)
+INSERT INTO role (title, salary, department_id)
 VALUES
-    (1, Steve, Devon);
+    ('Acountant', 100000, 3),
+    ('Sales Lead', 90000, 1),
+    ('Full Stack Developer', 80000, 2),
+    ('Software Engineer', 120000, 2),
+    ('Project Mananger', 100000, 4),
+    ('Operations Manager', 90000, 4);
+
+
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUES
+    ('Steve', 'Smith', 1, null),
+    ('Gina', 'Franko', 4, null),
+    ('Jacob', 'Eckert', 2, null),
+    ('Isaac', 'Newton', 6, 4),
+    ('Robert', 'Allison', 5, 5);
